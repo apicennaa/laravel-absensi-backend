@@ -61,13 +61,15 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
+                                            <th>Position</th>
                                             <th>Created At</th>
                                             <th>Action</th>
                                         </tr>
                                         @foreach ($users as $user)
                                             <tr>
 
-                                                <td>{{ $user->name }}
+                                                <td>
+                                                    {{ $user->name }}
                                                 </td>
                                                 <td>
                                                     {{ $user->email }}
@@ -75,7 +77,12 @@
                                                 <td>
                                                     {{ $user->phone }}
                                                 </td>
-                                                <td>{{ $user->created_at }}</td>
+                                                <td>
+                                                    {{ $user->position }}
+                                                </td>
+                                                <td>
+                                                    {{ $user->created_at }}
+                                                </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <a href='{{ route('users.edit', $user->id) }}'

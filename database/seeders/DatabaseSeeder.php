@@ -21,5 +21,17 @@ class DatabaseSeeder extends Seeder
             'email' => 'ranzdhika@absensi.com',
             'password' => Hash::make('12345678')
         ]);
+
+        // data dummy for company
+        \App\Models\Company::create([
+            'name' => 'ranzeinstore.id',
+            'email' => 'ranzeinstore@gmail.com',
+            'address' => 'Cipadung',
+            'latitude' => '-7.747033',
+            'longitude' => '110.355398',
+            'radius_km' => '0.5',
+            'time_in' => '08:00',
+            'time_out' => '17:00',
+        ]);
     }
 }
